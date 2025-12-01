@@ -1,0 +1,42 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Todos</h1>
+    <a class="btn btn-primary" href="{% url 'todo_add' %}">Add Todo</a>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Due</th>
+        <th>Completed</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in todos %}
+        <tr>
+          <td>{{ t.title }}</td>
+          <td>{% if t.due_date %}{{ t.due_date }}{% else %}-{% endif %}</td>
+          <td>
+            {% if t.completed %}
+              <span class="badge bg-success">Yes</span>
+            {% else %}
+              <span class="badge bg-secondary">No</span>
+            {% endif %}
+          </td>
+          <td class="text-end">
+            <a class="btn btn-sm btn-outline-success" href="{% url 'todo_toggle' t.pk %}">Toggle</a>
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'todo_edit' t.pk %}">Edit</a>
+            <a class="btn btn-sm btn-outline-danger" href="{% url 'todo_delete' t.pk %}">Delete</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">No todos yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
