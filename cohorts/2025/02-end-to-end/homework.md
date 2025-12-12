@@ -43,6 +43,44 @@ What's the initial prompt you gave to AI to start the implementation?
 Copy and paste it in the homework form.
 
 
+```
+You are an expert frontend engineer. Based on the AGENTS.md specification of a real-time collaborative code editor, generate ONLY the frontend application using React + Vite.
+
+REQUIREMENTS:
+- Implement the UI for a collaborative code editor.
+- Use React functional components + hooks.
+- Integrate Monaco Editor (or CodeMirror) with syntax highlighting for JS, Python, Java, C++, HTML, CSS.
+- Include UI for:
+  - joining/creating collaborative sessions
+  - live code editor (Monaco/CodeMirror)
+  - list of connected users
+  - cursor position indicators
+  - execute-code button and an output panel
+- Implement WebSocket client using socket.io-client.
+- Implement the following WebSocket events in the frontend:
+
+    // Client → Server
+    'join-session': { sessionId, userId }
+    'code-change': { sessionId, code, cursorPosition }
+    'execute-code': { sessionId, code, language }
+
+    // Server → Client
+    'user-joined': { userId, userCount }
+    'user-left': { userId, userCount }
+    'code-updated': { code, userId, cursorPosition }
+    'execution-result': { output, error }
+
+- Implement debounce on editor updates (300ms).
+- Provide clean, production-ready code using ESLint + Prettier conventions.
+
+DELIVERABLE:
+- Complete frontend folder structure.
+- All React source code files.
+- Vite config.
+- package.json (frontend only).
+- Do NOT include backend or openapi.yaml.
+```
+
 ## Question 2: Integration Tests
 
 Maybe at this point your application will already function. Maybe not. But it's always a good idea to cover it with tests.
@@ -55,7 +93,9 @@ Also it's a good idea to ask it to start creating a `README.md` file with all th
 
 What's the terminal command you use for executing tests?
 
-
+```
+npm test
+```
 
 ## Question 3: Running Both Client and Server
 
@@ -63,6 +103,9 @@ Now let's make it possible to run both client and server at the same time. Use `
 
 What's the command you have in `package.json` for `npm dev` for running both?
 
+```
+npm run dev
+```
 
 ## Question 4: Syntax Highlighting
 
@@ -70,7 +113,9 @@ Let's now add support for syntax highlighting for JavaScript and Python.
 
 Which library did AI use for it?
 
-
+```
+@monaco-editor/react
+```
 
 ## Question 5: Code Execution
 
@@ -80,6 +125,9 @@ For security reasons, we don't want to execute code directly on the server. Inst
 
 Which library did AI use for compiling Python to WASM?
 
+```
+Pyodide
+```
 
 ## Question 6: Containerization
 
@@ -87,12 +135,20 @@ Now let's containerize our application. Ask AI to help you create a Dockerfile f
 
 What's the base image you used for your Dockerfile?
 
+```
+node:18-alpine
+```
+
 
 ## Question 7: Deployment
 
 Now let's deploy it. Choose a service to deploy your application.
 
 Which service did you use for deployment?
+
+```
+hostinger
+```
 
 
 ## Homework URL
