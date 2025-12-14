@@ -195,26 +195,33 @@ Upload your video to LinkedIn, Twitter/X, or YouTube and share the link!
 
 ### Example post for LinkedIn:
 
-```
 🚀 Week 2 of AI Dev Tools Zoomcamp by @DataTalksClub complete!
+Just built a **Real-Time Collaborative Code Editor**! 🚀💻
 
-Just built a real-time collaborative coding interview platform using AI assistants!
+I'm excited to share my latest project—a full-stack web application that allows developers to write and execute code together in real-time. Think of it as a lightweight Google Docs for code!
 
-Today I learned how to:
+**🔹 Key Features:**
+✅ **Real-Time Collaboration**: Seamlessly sync code across multiple users using WebSockets (Socket.io).
+✅ **Live Code Execution**: Run JavaScript, Python, and more directly in the browser.
+✅ **Professional Editor**: Integrated **Monaco Editor** (the engine behind VS Code) for a premium coding experience.
+✅ **Robust Backend**: Built with **Node.js & Express**, ensuring fast and reliable performance.
+✅ **Containerized**: Fully Dockerized setup with **Redis** for scalable session management.
 
-- ✅ Build full-stack applications with AI (frontend + backend)
-- ✅ Implement real-time collaboration with WebSockets
-- ✅ Add syntax highlighting for multiple languages
-- ✅ Execute code safely in the browser with WASM
-- ✅ Containerize and deploy the application
+**🛠 Tech Stack:**
+- **Frontend**: React, Vite, Monaco Editor
+- **Backend**: Node.js, Express, Socket.io
+- **Infrastructure**: Docker, Redis
 
-Here's my repo: <LINK>
-Demo video: <VIDEO_LINK>
+Building this taught me a lot about WebSocket synchronization, race conditions, and safe code execution environments.
+
+Here's my repo: https://github.com/jelambrar96-datatalks/online-code-interview
+[Demo video](https://youtu.be/n_v4xXsL0ak)
 
 Following along with this amazing course - who else is building with AI?
 
 You can sign up here: https://github.com/DataTalksClub/ai-dev-tools-zoomcamp/
-```
+
+#WebDevelopment #ReactJS #NodeJS #SocketIO #RealTime #OpenSource #Coding #SoftwareEngineering #aidevtools #aidevtoolszoomcamp #datatalksclub
 
 ### Example post for Twitter/X:
 
@@ -227,8 +234,10 @@ You can sign up here: https://github.com/DataTalksClub/ai-dev-tools-zoomcamp/
 🎨 Syntax highlighting
 🚀 Browser code execution
 
-My repo: <LINK>
-Demo: <VIDEO_LINK>
+Here's my repo: https://github.com/jelambrar96-datatalks/online-code-interview
+[Demo video](https://youtu.be/n_v4xXsL0ak)
 
 Join me: https://github.com/DataTalksClub/ai-dev-tools-zoomcamp/
+
+#aidevtools #aidevtoolszoomcamp #datatalksclub
 ```
